@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, TextInput,Button, StyleSheet, Alert, Text, TouchableOpacity } from 'react-native';
+import { View, TextInput, StyleSheet, Alert, Text, TouchableOpacity, Pressable } from 'react-native';
 
 const LoginFrom =() =>{
     const [email, setEmail] = useState ('');
@@ -16,7 +16,7 @@ const LoginFrom =() =>{
     const handleForgotPassword = () =>{
         Alert.alert('pantalla de recuperación de contraseña')
     };
-
+  
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Correo electroníco</Text>
@@ -36,37 +36,41 @@ const LoginFrom =() =>{
             onChange={SetPassword}
             />
 
-        <View style={styles.forgotPassword}><TouchableOpacity onPress={handleForgotPassword}>
+        <TouchableOpacity onPress={handleForgotPassword}>
         <Text style={styles.forgotPassword}>¿Olvido su Contraseña?</Text>
         </TouchableOpacity>
+       
+        
+        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+        <Text style={styles.loginButtonButtonText}>Iniciar sesión</Text>
+        </TouchableOpacity>
+       
+        <TouchableOpacity style={styles.googleButton} onPress={handleLogin}>
+        <Text style={styles.googleButtonText}>Iniciar con Google</Text>
+        </TouchableOpacity>
+        
+        
+       
         </View>
-        <View style={styles.buttonContainer}>
-            <Button  title= 'Iniciar sesión' onPress={handleLogin} color='#007AFF'/>
-            <View style={{height: 10}} />
-            <Button  title= 'Iniciar con Google' onPress={handleLogin} />
-            </View>
-            <Text style={styles.tittle}>Crear cuenta</Text>
-            
-
-        </View>
-
+        
     );
 };
 
 const styles = StyleSheet.create({
-    container: { width: '100%', padding: 20},
+    container: { width: '100%', padding: 10, marginTop: 8,},
     title:{
         fontSize: 16,
         fontWeight: 'bold',
-        marginBottom:15,
+        marginBottom:5,
+        textAlign: '',
     },
     input: {
         width: '100%',
         height: 40,
         borderColor: 'gray',
         borderWidth: 1,
-        marginBottom: 10,
-        paddingLeft: 10,
+      
+        paddingLeft: 2,
         borderRadius: 8,
 
     },
@@ -76,10 +80,38 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         textDecorationLine: 'underline', 
     },
-    buttonContainer: {
+    loginButton: {
+        backgroundColor: '#28A745',
         marginTop: 10,
-
+        width: '100%',
+        height: 35,
+        borderRadius:8,
     },
+    loginButtonButtonText: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: 'white',
+        textAlign: 'center',
+        margin: 'auto',
+        
+    },
+    googleButton: {
+        backgroundColor: '#28A745',
+        marginTop: 10,
+        width: '100%',
+        height: 35,
+        borderRadius:8,
+        
+    },
+    googleButtonText: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: 'white',
+        textAlign: 'center',
+        margin: 'auto',
+        
+    },
+    
 });
 
 export default LoginFrom;

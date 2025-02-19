@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import LoginFrom from '../components/LoginFrom';
-
 const LoginScreen = () => {
     return (
         <View style={styles.container}>
