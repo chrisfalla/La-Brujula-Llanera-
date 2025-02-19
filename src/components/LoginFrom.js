@@ -41,10 +41,12 @@ const LoginFrom =() =>{
         </TouchableOpacity>
         </View>
         <View style={styles.buttonContainer}>
-            <Button  title= 'Iniciar sesión' onPress={handleLogin} color='#007AFF'/> 
+            <Button  title= 'Iniciar sesión' onPress={handleLogin} color='#007AFF'/>
             <View style={{height: 10}} />
             <Button  title= 'Iniciar con Google' onPress={handleLogin} />
             </View>
+            <Text style={styles.tittle}>Crear cuenta</Text>
+            
 
         </View>
 
@@ -76,7 +78,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         marginTop: 10,
-        
+
     },
 });
 
