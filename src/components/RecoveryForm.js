@@ -6,9 +6,19 @@ const RecoveryForm = ({ onBack }) => {
 
     const handlePasswordRecovery = () => {
         if (email === '') {
-            Alert.alert('Ingrese su correo electrónico.');
+            Alert.alert('Error', 'Ingrese su correo electrónico.');
         } else {
-            Alert.alert('Se ha enviado un enlace de recuperación a su correo electrónico.');
+            Alert.alert(
+                'Éxito',
+                'Se ha enviado un enlace de recuperación a su correo electrónico.',
+                [
+                    {
+                        text: 'OK',
+                        onPress: onBack,
+                    },
+                ],
+                { cancelable: false }
+            );
         }
     };
 

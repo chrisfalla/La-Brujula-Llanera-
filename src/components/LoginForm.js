@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet, Alert, Text, TouchableOpacity, Image } from 'react-native';
 
-const LoginForm = () => {
+const LoginForm = ({ onForgotPassword }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -13,13 +13,10 @@ const LoginForm = () => {
         }
     };
 
-    const handleForgotPassword = () => {
-        Alert.alert('pantalla de recuperación de contraseña');
-    };
-
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Correo electrónico</Text>
+            <Text style={styles.title}>Inicia sesión con tu cuenta</Text>
+            <Text style={styles.label}>Correo electrónico</Text>
             <TextInput
                 style={styles.input}
                 placeholder='ejemplo@ejemplo.com'
@@ -27,7 +24,7 @@ const LoginForm = () => {
                 value={email}
                 onChangeText={setEmail}
             />
-            <Text style={styles.title}>Contraseña</Text>
+            <Text style={styles.label}>Contraseña</Text>
             <TextInput
                 style={styles.input}
                 placeholder='********'
@@ -36,17 +33,16 @@ const LoginForm = () => {
                 onChangeText={setPassword}
             />
 
-            <TouchableOpacity onPress={handleForgotPassword}>
+            <TouchableOpacity onPress={onForgotPassword}>
                 <Text style={styles.forgotPassword}>¿Olvidó su Contraseña?</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-               
-                <Text style={styles.loginButtonButtonText}>Iniciar sesión</Text>
+                               <Text style={styles.loginButtonButtonText}>Iniciar sesión</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.googleButton} onPress={handleLogin}>
-            <Image source={require('../../assets/icon-google.png')} style={styles.iconGoogle}></Image>
+            <Image source={require('../../assets/icon-google.png')} style={styles.googleIcon} />
                 <Text style={styles.googleButtonText}>Iniciar con Google</Text>
             </TouchableOpacity>
 
@@ -66,6 +62,12 @@ const LoginForm = () => {
 const styles = StyleSheet.create({
     container: { width: '100%', padding: 10, marginTop: 8 },
     title: {
+fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 10,
+        textAlign: 'center',
+    },
+    label: {
         fontSize: 12,
         fontWeight: 'bold',
         marginBottom: 5,
@@ -79,7 +81,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
     },
     forgotPassword: {
-        fontSize:10,
+        fontSize: 10,
         color: '#1E90FF',
         textAlign: 'left',
         marginBottom: 12,
@@ -87,18 +89,19 @@ const styles = StyleSheet.create({
     },
     loginButton: {
         backgroundColor: '#28A745',
-       
+       marginTop: 10,
         width: '100%',
         height: 35,
         borderRadius: 8,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     loginButtonButtonText: {
         fontSize: 14,
         fontWeight: 'bold',
         color: 'white',
         textAlign: 'center',
-        margin: 'auto',
-    },
+           },
     googleButton: {
         backgroundColor: '#28A745',
         marginTop: 10,
@@ -107,26 +110,32 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
+    googleIcon: {
+        width: 20,
+        height: 20,
+        marginRight: 10,
+        },    
     googleButtonText: {
         fontSize: 14,
         fontWeight: 'bold',
         color: 'white',
         textAlign: 'center',
-       
-    },
+           },
     divider: {
         width: '100%',
-        height: 1.5,
+        height: 1,
         backgroundColor: 'gray',
-        marginTop: 30,
+        marginVertical: 20,
     },
     createAccountButton: {
         marginTop: 10,
         width: '100%',
-        height: 30,
+        height: 35,
         borderRadius: 8,
+        justifyContent: 'center',
+        alignItems:'center',
     },
     createAccountText: {
         fontSize: 14,
@@ -139,12 +148,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 5,
     },
-    iconGoogle: {
-        width: 25,
-        height: 25,
-        margin:'center',
-        },
-    
 });
 
 export default LoginForm;
