@@ -1,17 +1,17 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
-import LoginFrom from '../components/LoginFrom';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Image, TextInput, Alert, TouchableOpacity } from 'react-native';
+import LoginForm from '../components/LoginForm';
+
 const LoginScreen = () => {
     return (
         <View style={styles.container}>
             <Image source={require('../../assets/logo.png')}
             style={styles.logo}/>
             <Text style={styles.title}> Inicia sesión con tu cuenta</Text>
-            <LoginFrom/>
+            <LoginForm/>
         </View>
     );
 };
-
 
 const styles = StyleSheet.create({
     container: {
@@ -22,20 +22,16 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     logo:{
-        width: 300, // Ajusta el ancho de la imagen
-        height: 300, // Ajusta la altura de la imagen
-        marginBottom: 0, // Espacio entre la imagen y el texto
+        width: 250,
+        height: 250,
+        marginBottom: 0,
         resizeMode: 'contain'
-
     },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 10,
-        
-      },
-    
-  
+    },
 });
 
 export default LoginScreen;

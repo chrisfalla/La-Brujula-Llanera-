@@ -16,7 +16,7 @@ const LoginFrom =() =>{
     const handleForgotPassword = () =>{
         Alert.alert('pantalla de recuperación de contraseña')
     };
-  
+
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Correo electroníco</Text>
@@ -39,8 +39,7 @@ const LoginFrom =() =>{
         <TouchableOpacity onPress={handleForgotPassword}>
         <Text style={styles.forgotPassword}>¿Olvido su Contraseña?</Text>
         </TouchableOpacity>
-       
-        
+
         <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
         <Text style={styles.loginButtonButtonText}>Iniciar sesión</Text>
         </TouchableOpacity>
@@ -48,8 +47,13 @@ const LoginFrom =() =>{
         <TouchableOpacity style={styles.googleButton} onPress={handleLogin}>
         <Text style={styles.googleButtonText}>Iniciar con Google</Text>
         </TouchableOpacity>
+        <View style={styles.container}>
+        <Text style={styles.createAccont}>Crear cuenta</Text>
+        </View>
         
-        
+        <View style={styles.container}>
+        <Text style={styles.information}>Al registrarte, aceptas los Términos de servicio y la Política de privacidad, incluida la política de Uso de Cookies.</Text>
+        </View>
        
         </View>
         
@@ -57,20 +61,19 @@ const LoginFrom =() =>{
 };
 
 const styles = StyleSheet.create({
-    container: { width: '100%', padding: 10, marginTop: 8,},
+    container: { width: '100%', padding: 10, marginTop: 15,},
     title:{
-        fontSize: 16,
+        fontSize: 12,
         fontWeight: 'bold',
-        marginBottom:5,
-        textAlign: '',
+        marginBottom:1,
+        
     },
     input: {
         width: '100%',
         height: 40,
         borderColor: 'gray',
         borderWidth: 1,
-      
-        paddingLeft: 2,
+        paddingLeft: 10,
         borderRadius: 8,
 
     },
@@ -78,7 +81,7 @@ const styles = StyleSheet.create({
         color: '#1E90FF',  // Color azul para simular un enlace
         textAlign: 'flex-start',
         marginBottom: 10,
-        textDecorationLine: 'underline', 
+        textDecorationLine: 'underline',
     },
     loginButton: {
         backgroundColor: '#28A745',
@@ -109,9 +112,20 @@ const styles = StyleSheet.create({
         color: 'white',
         textAlign: 'center',
         margin: 'auto',
-        
     },
-    
+ 
+
+    createAccont: {
+        fontSize: 14,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    information: {
+       
+        fontSize: 11,
+        marginTop: '15',
+        textAlign: 'center',
+    },
 });
 
 export default LoginFrom;
