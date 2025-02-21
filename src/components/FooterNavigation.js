@@ -12,6 +12,10 @@ const FooterNavigation = () => {
             <Tab.Navigator initialRouteName="Home">
                 <Tab.Screen name="Home" component={HomeScreen} />
                 <Tab.Screen name="Login" component={LoginScreen} />
+                <Tab.Screen name="Register" component={LoginScreen} />
+                <Tab.Screen name="Search" component={LoginScreen} />
+                <Tab.Screen name="Mapa" component={LoginScreen} />
+                <Tab.Screen name="Categories" component={LoginScreen} />
             </Tab.Navigator>
         </NavigationContainer>
     );
