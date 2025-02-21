@@ -60,9 +60,9 @@ const LoginForm = ({ onForgotPassword }) => {
 };
 
 const styles = StyleSheet.create({
-    container: { width: '100%', padding: 10, marginTop: 8 },
+    container: { width: '100%', padding: 5, marginTop: 1 },
     title: {
-fontSize: 24,
+        fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 10,
         textAlign: 'center',
@@ -70,31 +70,39 @@ fontSize: 24,
     label: {
         fontSize: 12,
         fontWeight: 'bold',
-        marginBottom: 5,
+        paddingLeft: 30,
     },
     input: {
-        width: '100%',
+        width: '85%',
         height: 40,
         borderColor: 'gray',
         borderWidth: 1,
         paddingLeft: 10,
         borderRadius: 8,
-    },
+        margin:'auto',
+        marginBottom: 15,
+        },
     forgotPassword: {
         fontSize: 10,
         color: '#1E90FF',
         textAlign: 'left',
-        marginBottom: 12,
+        marginTop: -10,
+        marginLeft: 25,
+        marginBottom: 15,
         textDecorationLine: 'underline',
+      
+       
+        
     },
     loginButton: {
-        backgroundColor: '#28A745',
+        backgroundColor: 'rgba(40, 167, 70, 0.65)',
        marginTop: 10,
-        width: '100%',
+        width: '85%',
         height: 35,
         borderRadius: 8,
         justifyContent: 'center',
         alignItems: 'center',
+        margin: 'auto',
     },
     loginButtonButtonText: {
         fontSize: 14,
@@ -103,14 +111,15 @@ fontSize: 24,
         textAlign: 'center',
            },
     googleButton: {
-        backgroundColor: '#28A745',
+        backgroundColor: 'rgba(40, 167, 70, 0.65)',
         marginTop: 10,
-        width: '100%',
+        width: '85%',
         height: 35,
         borderRadius: 8,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+        margin: 'auto',
     },
     googleIcon: {
         width: 20,
@@ -124,9 +133,10 @@ fontSize: 24,
         textAlign: 'center',
            },
     divider: {
-        width: '100%',
+        width: '85%',
         height: 1,
         backgroundColor: 'gray',
+        margin:'auto',
         marginVertical: 20,
     },
     createAccountButton: {
@@ -144,9 +154,11 @@ fontSize: 24,
         textAlign: 'center',
     },
     information: {
-        fontSize: 12,
+        fontSize: 10,
         textAlign: 'center',
-        marginTop: 5,
+        marginTop: 1,
+        fontStyle:'italic',
+
     },
 });
 

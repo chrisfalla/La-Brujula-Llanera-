@@ -24,12 +24,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#ffff',
-        padding: 10,
+       
     },
     logo: {
         width: 250,
-        height: 250,
-        marginBottom: 0,
+        height: 250,       
         resizeMode: 'contain',
     },
 });

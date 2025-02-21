@@ -25,6 +25,7 @@ const RecoveryForm = ({ onBack }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Recuperar Contraseña</Text>
+            <Text style={styles.description}>Ingresa el correo electronico asociado a la cuenta, para enviarte un enlace para recuperar tu contraseña</Text>
             <TextInput
                 style={styles.input}
                 placeholder='ejemplo@ejemplo.com'
@@ -33,7 +34,7 @@ const RecoveryForm = ({ onBack }) => {
                 onChangeText={setEmail}
             />
             <TouchableOpacity style={styles.recoveryButton} onPress={handlePasswordRecovery}>
-                <Text style={styles.recoveryButtonText}>Enviar</Text>
+                <Text style={styles.recoveryButtonText}>Confirmar</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={onBack}>
                 <Text style={styles.backButton}>Volver</Text>
@@ -47,9 +48,15 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: 'bold',
-        marginBottom: 20,
+        marginBottom: 10,
         textAlign: 'center',
     },
+    description: {
+        fontSize: 12,
+        textAlign: 'center',
+        marginBottom: 20,
+    },
+
     input: {
         width: '100%',
         height: 40,
@@ -57,10 +64,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         paddingLeft: 10,
         borderRadius: 8,
-        marginBottom: 20,
+        marginBottom: 25,
     },
     recoveryButton: {
-        backgroundColor: '#28A745',
+        backgroundColor: 'rgba(40, 167, 70, 0.65)',
         width: '100%',
         height: 35,
         borderRadius: 8,
