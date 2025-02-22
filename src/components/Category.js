@@ -1,22 +1,26 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet, Image } from 'react-native';
 
 const Category = () => {
     return (
         <View style={styles.container}>
             <View style={styles.row}>
-                <TouchableOpacity style={[styles.button, { backgroundColor: "#73C686" }]}  onPress={() => alert("¡Botón 1 presionado!") }>
+                <TouchableOpacity style={[styles.button, { backgroundColor: "#73C686" }]} onPress={() => alert("¡Botón 1 presionado!")}>
+                    <Image source={require('../../assets/Hotel_Icon.png')} style={styles.icon} />
                     <Text style={styles.buttonText}>Alojamiento</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.button, { backgroundColor: "#D9D9D9" }]} onPress={() => alert("¡Botón 2 presionado!")}>
-                    <Text style={styles.buttonText}>Alimentacion</Text>
+                    <Image source={require('../../assets/Restaurant_Icon.png')} style={styles.icon} />
+                    <Text style={styles.buttonText}>Alimentación</Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.row}>
                 <TouchableOpacity style={[styles.button, { backgroundColor: "#73C686" }]} onPress={() => alert("¡Botón 3 presionado!")}>
-                    <Text style={styles.buttonText}>Sitio Turistico</Text>
+                    <Image source={require('../../assets/camera_Icon.png')} style={styles.icon} />
+                    <Text style={styles.buttonText}>Sitio Turístico</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.button, { backgroundColor: "#D9D9D9" }]} onPress={() => alert("¡Botón 4 presionado!")}>
+                    <Image source={require('../../assets/Rental_Icon.png')} style={styles.icon} />
                     <Text style={styles.buttonText}>Alquiler</Text>
                 </TouchableOpacity>
             </View>
@@ -32,25 +36,30 @@ const styles = StyleSheet.create({
     },
     row: {
         flexDirection: 'row',
-        alignSelf: 'center', // Centra la fila en la pantalla
-        marginVertical: 5, // Espacio entre filas
+        alignSelf: 'center',
+        marginVertical: 5,
     },
     button: {
-        width: 150, // Ajusta el ancho
-        height: 150, // Ajusta el alto
-        backgroundColor: '#6200ea',
+        width: 150,
+        height: 150,
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 15,
         marginHorizontal: 15,
-        marginVertical: 10, // Reduce el espacio entre botones
-        borderRadius: 15, // Bordes redondeados
+        marginVertical: 10,
+        borderRadius: 15,
     },
     buttonText: {
         color: 'white',
         fontSize: 18,
         fontWeight: 'bold',
     },
+    icon: {
+        width: 50,
+        height: 50,
+        marginBottom: 10,
+        resizeMode: 'contain',
+    },
 });
 
 export default Category;
+
