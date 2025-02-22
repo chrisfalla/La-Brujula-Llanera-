@@ -19,7 +19,7 @@ const LoginForm = ({ onForgotPassword }) => {
             <Text style={styles.label}>Correo electrónico</Text>
             <TextInput
                 style={styles.input}
-                placeholder='ejemplo@ejemplo.com'
+                placeholder='ejemplo@gmail.com'
                 keyboardType='email-address'
                 value={email}
                 onChangeText={setEmail}
@@ -38,11 +38,11 @@ const LoginForm = ({ onForgotPassword }) => {
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-                               <Text style={styles.loginButtonButtonText}>Iniciar sesión</Text>
+                <Text style={styles.loginButtonButtonText}>Iniciar sesión</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.googleButton} onPress={handleLogin}>
-            <Image source={require('../../assets/icon-google.png')} style={styles.googleIcon} />
+                <Image source={require('../../assets/icon-google.png')} style={styles.googleIcon} />
                 <Text style={styles.googleButtonText}>Iniciar con Google</Text>
             </TouchableOpacity>
 
@@ -60,7 +60,7 @@ const LoginForm = ({ onForgotPassword }) => {
 };
 
 const styles = StyleSheet.create({
-    container: { width: '100%', padding: 5, marginTop: 1 },
+    container: { width: '100%', padding: 5, marginTop: 1, },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         margin:'auto',
         marginBottom: 15,
-        },
+    },
     forgotPassword: {
         fontSize: 10,
         color: '#1E90FF',
@@ -90,13 +90,10 @@ const styles = StyleSheet.create({
         marginLeft: 25,
         marginBottom: 15,
         textDecorationLine: 'underline',
-      
-       
-        
     },
     loginButton: {
         backgroundColor: 'rgba(40, 167, 70, 0.65)',
-       marginTop: 10,
+        marginTop: 10,
         width: '85%',
         height: 35,
         borderRadius: 8,
@@ -109,7 +106,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'white',
         textAlign: 'center',
-           },
+    },
     googleButton: {
         backgroundColor: 'rgba(40, 167, 70, 0.65)',
         marginTop: 10,
@@ -125,13 +122,13 @@ const styles = StyleSheet.create({
         width: 20,
         height: 20,
         marginRight: 10,
-        },    
+    },
     googleButtonText: {
         fontSize: 14,
         fontWeight: 'bold',
         color: 'white',
         textAlign: 'center',
-           },
+    },
     divider: {
         width: '85%',
         height: 1,
@@ -158,7 +155,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 1,
         fontStyle:'italic',
-
     },
 });
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, TextInput, StyleSheet, Alert, Text, TouchableOpacity } from 'react-native';
+import { View, TextInput, StyleSheet, Alert, Text, TouchableOpacity,  } from 'react-native';
+
 
 const RecoveryForm = ({ onBack }) => {
     const [email, setEmail] = useState('');
@@ -24,8 +25,9 @@ const RecoveryForm = ({ onBack }) => {
 
     return (
         <View style={styles.container}>
+            
             <Text style={styles.title}>Recuperar Contraseña</Text>
-            <Text style={styles.description}>Ingresa el correo electronico asociado a la cuenta, para enviarte un enlace para recuperar tu contraseña</Text>
+            <Text style={styles.description}>Ingresa el correo electrónico asociado a la cuenta, para enviarte un enlace para recuperar tu contraseña</Text>
             <TextInput
                 style={styles.input}
                 placeholder='ejemplo@ejemplo.com'
@@ -44,7 +46,7 @@ const RecoveryForm = ({ onBack }) => {
 };
 
 const styles = StyleSheet.create({
-    container: { width: '100%', padding: 10, marginTop: 8 },
+    container: { width: '85%', padding: 10,  },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
@@ -56,7 +58,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 20,
     },
-
     input: {
         width: '100%',
         height: 40,
