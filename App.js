@@ -1,20 +1,7 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
-import Category from './src/components/Category';
+import HomeScreen from './src/screens/HomeScreen';
+// import LoginScreen from './src/screens/LoginScreen';
 
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Category />
-    </SafeAreaView>
-  );
+  return <HomeScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffe',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
