@@ -5,7 +5,8 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Bienvenido a la pantalla de inicio</Text>
-            <Text style={styles.subtitle}>Este es el HomeScreen</Text>
+            <Text style={styles.subtitle}>Este es el HomeScreen aja y tu que 
+            </Text>
         </View>
     );
 };
